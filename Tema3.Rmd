@@ -77,4 +77,8 @@ library(stringr)
 # Si no tienes descargadas las fuentes, ejecuta esto antes: font_import
 loadfonts(device = "win", quiet = TRUE)
 
+# Lectura de los datos de forma correcta
+# Cambiamos el tipo de la fecha de chr a tipo fecha
+covid_data <- read_csv("./data/owid-covid-data.csv", col_types = cols(date = col_date(format = "%Y-%m-%d")))
+
 ```
