@@ -62,5 +62,15 @@ knit_hooks$set(inline = function(x) {
 ## Imagen Covid
 
 ```{r}
+# Cargamos las librerías que vamos a necesitar
+library(tidyverse)
+library(knitr)
+library(htmltools)
+library(plotly)
+library(ggplot2)
+library(datasets)
+library(dplyr)
+library(extrafont)
+library(stringr)
 
 ```
