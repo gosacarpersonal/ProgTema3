@@ -73,4 +73,8 @@ library(dplyr)
 library(extrafont)
 library(stringr)
 
+# Carga de fuentes de letra adicionales
+# Si no tienes descargadas las fuentes, ejecuta esto antes: font_import
+loadfonts(device = "win", quiet = TRUE)
+
 ```
