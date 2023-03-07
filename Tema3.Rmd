@@ -100,7 +100,7 @@ country_colors <- c(
   "Spain" =  "black"
 )
 
-# Creamos gráfico lo más parecido al ejemplo de AV
+# Creamos el gráfico lo más parecido al ejemplo de AV
 grafico_covid <- ggplot(selected_data, aes(x = date, y = deaths_per_million, color = country, group = country)) + 
   geom_line(data = filter(selected_data, country == "Spain"), size = 1) + 
   geom_path() + 
@@ -117,4 +117,12 @@ grafico_covid <- ggplot(selected_data, aes(x = date, y = deaths_per_million, col
     plot.subtitle = element_text(color = "#818181"),
     plot.caption = element_text(hjust = 0, color = "#818181")
   )
+
+# Convertimos el gráfico a uno interactivo utilizando plotly
+grafico_covid_interactivo <- ggplotly(grafico_covid) %>%
+  layout(plot_bgcolor = "white", paper_bgcolor = "white")
+
+# Muestra los gráficos
+grafico_covid
+grafico_covid_interactivo
 ```
